@@ -1,0 +1,152 @@
+/* 基本樣式設計 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+
+/* 麵包展示區 */
+.bread-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列布局 */
+    gap: 20px; /* 卡片間的間距 */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* 每個麵包卡片 */
+.bread-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* 當鼠標懸停時的動畫效果 */
+.bread-card:hover {
+    transform: translateY(-10px);
+}
+
+/* 麵包卡片中的圖片 */
+.bread-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 麵包卡片的標題 */
+.bread-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* 麵包卡片中的描述文字 */
+.bread-card p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* 價格 */
+.price {
+    font-size: 20px;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .bread-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 小屏幕時變成2列 */
+    }
+}
+
+@media (max-width: 480px) {
+    .bread-gallery {
+        grid-template-columns: 1fr; /* 更小螢幕時變成單列 */
+    }
+}
+
+/* 全域樣式 */
+
+
+header {
+    background-color: #96663a00;
+    color: #fff;
+    text-align: center;
+    padding: １５px 0;
+}
+
+
+
+header p {
+    font-size: 18px;
+}
+
+/* 常見問題區 */
+.faq-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    background-color:  
+    #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    background-color: #e7c0af;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #ff9800;
+}
+
+.faq-answer {
+    padding: 20px;
+    display: none;  /* 默認隱藏答案 */
+    background-color: #ccae9a;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
